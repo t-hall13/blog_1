@@ -6,3 +6,16 @@ Specs:
 -Should have title between 5 and 50 characters
 -Should have description between 5 and 150 characters
 -Should belong to author, validate author id
+
+Users
+
+-create and save new user
+-create user from web
+
+Specs
+
+-Should have username between 3 and 15 characters
+-Build 1 to many association between users and articles
+Artice belongs to User
+User has many articles
+Test for association

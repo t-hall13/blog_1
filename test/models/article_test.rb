@@ -25,5 +25,19 @@ class ArticleTest < ActiveSupport::TestCase
        assert_not @article.valid?
    end
    
+   test 'description should be present' do
+      @article.description = ""
+      assert_not @article.valid?
+   end
+   
+   test 'description should not be too short' do
+       @article.description = "aaa"
+       assert_not @article.valid?
+   end
+   
+   test 'description should not be too long' do
+       @article.description = "a"*151
+       assert_not @article.valid?
+   end
    
 end
